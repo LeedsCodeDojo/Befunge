@@ -1,0 +1,42 @@
+buildscript {
+	ext {
+		kotlinVersion = '1.2.20'
+		junitVersion = '4.12'
+	}
+	repositories {
+		mavenCentral()
+	}
+	dependencies {
+		classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:${kotlinVersion}")
+	}
+}
+
+apply plugin: 'kotlin'
+apply plugin: 'eclipse'
+
+group = 'co.jfactoy'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = 1.8
+compileKotlin {
+	kotlinOptions {
+		freeCompilerArgs = ["-Xjsr305=strict"]
+		jvmTarget = "1.8"
+	}
+}
+compileTestKotlin {
+	kotlinOptions {
+		freeCompilerArgs = ["-Xjsr305=strict"]
+		jvmTarget = "1.8"
+	}
+}
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	compile("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
+
+	testCompile "junit:junit:4.12"
+
+}
