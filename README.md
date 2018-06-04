@@ -8,7 +8,9 @@ Befunge is a stack-based programming language which uses instructions passed in 
 ## Getting Started
 Initially we will consider simple programs as just a list of instructions
 (i.e. a 1D line of instructions rather than a 2D array).  
-This will allow us to test our Befunge processor and provide quick feed back.  
+This will allow us to test our Befunge processor and provide quick feed back.
+
+An online Befunge Parser is available at: https://leedscodedojo.github.io/Befunge/
 
 
 ### Simple Operations:
@@ -29,11 +31,10 @@ This will allow us to test our Befunge processor and provide quick feed back.
 | , | Pop value and output as ASCII character (no following space) |
 | @ | End program |
 | ' ' |	No-op. Does nothing |
-
+| " | Start string mode: push each character's ASCII value all the way up to the next " |
 
 ## Create Befunge Parser
 Time to create our own implementation of a Befunge parser which will take a single line program and calculate an answer.
-
 
 ## Simple Befunge Problems
 
