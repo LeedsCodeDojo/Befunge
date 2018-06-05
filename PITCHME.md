@@ -41,16 +41,15 @@
   * `@`	- End of Program
 ---
 ### Loops
-Loops are represented by circular paths on the 2D Grid. Implemented by changing the direction that the next instruction is read from.
-
+* Loops are represented by circular paths on the 2D Grid. Implemented by changing the direction that the next instruction is read from.
   * `>` - Start moving RIGHT
   * `<` - Start moving LEFT
   * `^` - Start moving UP
   * `v` - Start moving DOWN
   * `#` - Bridge, jump over next instruction.
 
-Operation will continue in the new direction until direction is changed again.
-The 2D Grid can actually be thought of as a 3D Torus since it wraps in both the horizontal & vertical directions.
+* Operation will continue in the new direction until direction is changed again.
+
 ---
 ### Branching/Conditional Statements
 
