@@ -2,7 +2,7 @@
 ### Experiments with an Esoteric Language
 
 ---
-# Introduction
+## Introduction
 
 1. What is an Esoteric Language?
   * Intended as a challenge/fun rather than a serious language.
@@ -15,7 +15,7 @@
   * It's a bit of fun and mental challenge :)
 
 ---
-#  Befunge Overview
+##  Befunge Overview
 
 * Befunge programs are written on a 2D Grid.
 * Each instruction is a single character.
@@ -25,7 +25,7 @@
 NB - The Stack will only contain Integer values (either numbers or ASCII values of characters) 
 
 ---
-# Basic Instructions
+### Basic Instructions
 
   * `0` -> `9` - Add integer to Stack
   * `+` - Addition: Pop a and b, then push a+b
@@ -43,7 +43,7 @@ NB - The Stack will only contain Integer values (either numbers or ASCII values 
   * `@`	- End of Program
   
 ---
-# Loops
+### Loops
 Loops are represented by circular paths on the 2D Grid.
 Implemented by changing the direction that the next instruction is read from.
 
@@ -57,7 +57,7 @@ Operation will continue in the new direction until direction is changed again.
 The 2D Grid can actually be thought of as a 3D Torus since it wraps in both the horizontal & vertical directions.
 
 ---
-# Branching/Conditional Statements
+### Branching/Conditional Statements
 
   * `!` - Logical NOT: Pop a value. If the value is zero, push 1; otherwise, push zero.
   * `  - Greater than: Pop a and b, then push 1 if b>a, otherwise zero.
@@ -65,7 +65,7 @@ The 2D Grid can actually be thought of as a 3D Torus since it wraps in both the 
   * `|` - Pop a value; move down if value=0, up otherwise
 
 ---
-# Handling Strings
+### Handling Strings
 Strings can be embedded into the 2D Grid between quotes.
 The ASCII value of each character between the quotes is pushed onto the stack.
 ```
@@ -73,7 +73,7 @@ The ASCII value of each character between the quotes is pushed onto the stack.
              ^,_@
 ```
 ---
-# Advanced Statements
+### Advanced Statements
 
   * `p` - Put a value into a grid element 
   * `g` - Get a value from a grid element
@@ -87,7 +87,7 @@ Request input from the user:
  * `~` - Ask user for a character and push its ASCII value
   
 ---
-# Build a Befunge Parser
+## Build a Befunge Parser
 
 1. Use your preferred language to build a Befunge parser.
   * Given a program in a 2D Grid, your parser should navigate through the program & output the result.
